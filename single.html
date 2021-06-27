@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/single-page.css">
+    <title>Single Player</title>
+</head>
+
+<body>
+    <div>
+        <div class="box">
+            <div class="row-1">
+                <div id="00" onclick="UserClick('00','O')" class="boxes"></div>
+                <div id="01" onclick="UserClick('01','O')" class="boxes"></div>
+                <div id="02" onclick="UserClick('02','O')" class="boxes"></div>
+            </div>
+            <div class="row-2">
+                <div id="10" onclick="UserClick('10','O')" class="boxes"></div>
+                <div id="11" onclick="UserClick('11','O')" class="boxes"></div>
+                <div id="12" onclick="UserClick('12','O')" class="boxes"></div>
+            </div>
+            <div class="row-3">
+                <div id="20" onclick="UserClick('20','O')" class="boxes"></div>
+                <div id="21" onclick="UserClick('21','O')" class="boxes"></div>
+                <div id="22" onclick="UserClick('22','O')" class="boxes"></div>
+            </div>
+        </div>
+        <div class="details">
+            <h1 id="showName"></h1>
+            <h1 id="state"></h1>
+        </div>
+    </div>
+
+    <script src="./confetti.js-master/confetti.js"></script>
+    <script src="./confetti.js-master/confetti.min.js"></script>
+    <script src="/assets/js/single.js">
+    </script>
+
+
+</body>
+
+</html>

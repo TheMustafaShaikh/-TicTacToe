@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0px;
+    background-color: #3aafa9;
+    font-family: 'Poppins', sans-serif;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+    display: flex;
+}
+
+#ShowGame {
+    display: none;
+}
+
+.box {
+    float: left;
+    border: 2px solid #2b7a78;
+    border-radius: 20px;
+    margin: 50px;
+    overflow: hidden;
+    background-color: #def2f1;
+    filter: drop-shadow(30px 10px 4px rgba(114, 100, 100, 0.5));
+}
+
+.boxes {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #2b7a78;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #2b7a78;
+}
+
+.new-user {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.new-user input {
+    font-family: 'Poppins';
+    height: 30px;
+    width: 30%;
+    border: none;
+    outline: none;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
+    border-radius: 6px;
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
+}
+
+.new-user input:focus {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+}
+
+.new-user button {
+    margin-top: 20px;
+    transition: 0.5s ease-in-out;
+    text-decoration: none;
+    color: #17252a;
+    background: transparent;
+    padding: 10px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    transform: scale(1);
+    border: 2px solid #17252a;
+    cursor: pointer;
+}
+
+.new-user button:hover {
+    transition: 0.5s ease-in-out;
+    background-color: #def2f1;
+    transform: scale(1.1);
+}

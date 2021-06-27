@@ -1,12 +1,16 @@
-// var name = prompt("Please Enter Your Name?");
-// if (!name) {
-//     name = prompt("Please Enter Your Name?")
-// } else {
-//     document.getElementById("showName").innerHTML = name + " VS COMPUTER!";
-// }
-var name = "MS";
+var name = prompt("Please Enter Your Name?");
+if (!name) {
+    name = prompt("Please Enter Your Name?")
+} else {
+    // document.getElementById("showName").innerHTML = name + " VS COMPUTER!";
+    document.getElementById("match-info").innerHTML = name.toString().toUpperCase() + " VS COMPUTER."
+    document.getElementById("userName").innerHTML = name.toString().toUpperCase()+" :";
+
+}
 
 var counter = 0;
+var PlayerWin = 0;
+var ComputerWin = 0;
 
 function reset() {
     array = [
@@ -96,10 +100,12 @@ function checkWhoWon() {
 
         }
         if (UserCheck5 == 3) {
-            document.getElementById("state").innerHTML = name + "WON! WOOHOO!";
+            PlayerWin++;
+            document.getElementById("PScore").innerHTML = " "+PlayerWin;
+            document.getElementById("state").innerHTML = name +  " WON! WOOHOO!";
             confetti.start(5000)
             setTimeout(() => {
-                document.getElementById("state").innerHTML = "";
+                document.getElementById("stassste").innerHTML = "";
             }, 2000)
 
             // alert(name + " won");
@@ -111,6 +117,8 @@ function checkWhoWon() {
         }
 
         if (ComputerCheck5 == 3) {
+            ComputerWin++;
+            document.getElementById("cScore").innerHTML = " "+ComputerWin;
             document.getElementById("state").innerHTML = "Better Luck Next Time!";
             setTimeout(() => {
                 document.getElementById("state").innerHTML = "";
@@ -128,7 +136,9 @@ function checkWhoWon() {
     var draw = true;
     if (UserCheck1 == 3 || UserCheck2 == 3 || UserCheck3 == 3 || UserCheck4 == 3 || UserCheck5 == 3 || UserCheck6 == 3) {
         // alert(name + " won!");
-        document.getElementById("state").innerHTML = name + "WON! WOOHOO!";
+        PlayerWin++;
+            document.getElementById("PScore").innerHTML = " "+PlayerWin;
+        document.getElementById("state").innerHTML = name + " WON! WOOHOO!";
         confetti.start(5000)
         setTimeout(() => {
             document.getElementById("state").innerHTML = "";
@@ -140,6 +150,8 @@ function checkWhoWon() {
     }
     if (ComputerCheck1 == 3 || ComputerCheck2 == 3 || ComputerCheck3 == 3 || ComputerCheck4 == 3 || ComputerCheck5 == 3 || ComputerCheck6 == 3) {
         // alert("Computer won!");
+        ComputerWin++;
+        document.getElementById("cScore").innerHTML = " "+ComputerWin;
         document.getElementById("state").innerHTML = "Better Luck Next Time!";
         setTimeout(() => {
             document.getElementById("state").innerHTML = "";
@@ -211,8 +223,50 @@ function UserClick(location, user) {
     if (array[parseInt(split[0])][parseInt(split[1])] == 0) {
         array[parseInt(split[0])][parseInt(split[1])] = 1;
         document.getElementById(location).innerHTML = user;
-        computerTurn();
         checkWhoWon();
+        computerTurn();
     }
 
+}
+
+
+
+//darkmode and light mode functions..
+
+function darkMode(){
+
+    if(document.getElementById("btn2").classList.contains("active")){
+        
+    }else{
+        if(document.getElementById("btn1").classList.contains("active")){
+            document.getElementById("btn1").classList.remove("active");
+            document.getElementById("btn2").classList.add("active");
+            document.querySelector("body").style.transition = "0.5s ease-in-out";
+            document.querySelector("body").style.backgroundColor = "black";
+            document.querySelector(".details").style.color = "white";
+            document.querySelector("#match-info").style.color = "white";
+            document.querySelector(".switch").style.backgroundColor = "#484848";
+            document.querySelector(".showScore").style.color = "white";
+            document.querySelector("#userName").style.color = "white";
+            document.querySelector("#PScore").style.color = "white";
+        }
+    }
+}
+function lightMode(){
+    if(document.getElementById("btn1").classList.contains("active")){
+        
+    }else{
+        if(document.getElementById("btn2").classList.contains("active")){
+            document.getElementById("btn2").classList.remove("active");
+            document.getElementById("btn1").classList.add("active");
+            document.querySelector("body").style.backgroundColor = "#3aafa9";
+            document.querySelector(".details").style.color = "black";
+            document.querySelector("#match-info").style.color = "black";
+            document.querySelector(".showScore").style.color = "black";
+            document.querySelector(".switch").style.backgroundColor = "#2B7A78";
+            document.querySelector("#userName").style.color = "black";
+            document.querySelector("#PScore").style.color = "black";
+            
+        }
+    }
 }

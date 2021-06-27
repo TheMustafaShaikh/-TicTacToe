@@ -36,3 +36,59 @@ body {
     font-size: 25px;
     color: #2b7a78;
 }
+#state{
+    display: flex;
+    justify-content: center;
+}
+#match-info{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.switch{
+  
+  
+    text-align:center;
+    margin:8px;
+    background-color:#2B7A78;
+    height:50px;
+    width:200px;
+    display:flex;
+    border-radius:10px;
+ 
+}
+.btn{
+    width:100px;
+    height:50px;
+    border:none;
+    border-radius:10px;
+    font-family:'Poppins';
+    font-weight:bold;
+    background-color:transparent;
+}
+
+.active{
+    background-color:#DEF2F1;
+}
+
+.showScore{
+    text-align:center;
+    font-weight:bold;
+    display:flex;
+    justify-content: center;
+}
+
+/* .switch button{
+    background-color:#DEF2F1;
+    width:100px;
+    height:50px;
+    border:none;
+    border-radius:10px;
+} */
+.divss{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+
+}
